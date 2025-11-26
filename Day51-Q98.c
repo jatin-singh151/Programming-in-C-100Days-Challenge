@@ -1,46 +1,36 @@
-Q98: Write a Program to take a sorted array arr[] and an integer x as input,
-find the index (0-based) of the smallest element in arr[] that is greater than or equal to x and print it.
-This element is called the ceil of x. If such an element does not exist, print -1.
-Note: In case of multiple occurrences of ceil of x, return the index of the first occurrence.
+Q98: Write a Program to take an array of integers as input, calculate the pivot index of this array. The pivot index is the index where the sum of all the numbers strictly to the left of the index is equal to the sum of all the numbers strictly to the index's right. If the index is on the left edge of the array, then the left sum is 0 because there are no elements to the left. This also applies to the right edge of the array. Print the leftmost pivot index. If no such index exists, print -1.
+
 
 /*
 Sample Test Cases:
 Input 1:
-arr = [1, 2, 8, 10, 11, 12, 19], x = 5
+nums = [1,7,3,6,5,6]
 Output 1:
-2
+3
 
 Input 2:
-arr = [1, 2, 8, 10, 11, 12, 19], x = 20
+nums = [1,2,3]
 Output 2:
 -1
 
 Input 3:
-arr = [1, 1, 2, 8, 10, 11, 12, 19], x = 0
+nums = [2,1,-1]
 Output 3:
 0
-
-Input 4:
-arr = [1, 1, 2, 8, 10, 11, 12, 19], x = 2
-Output 4:
-2
 
 */
 #include <stdio.h>
 
 int main() {
-    char ch;
-    char s[100];
-    char sen[100];
+    int a, b;
+    float x, y;
     
-    scanf("%c", &ch);
-    scanf("%s", s);
-    scanf("\n");
-    scanf("%[^\n]%*c", sen);
+    scanf("%d %d", &a, &b);
+    scanf("%f %f", &x, &y);
     
-    printf("%c\n", ch);
-    printf("%s\n", s);
-    printf("%s\n", sen);
+    printf("%d %d\n", a + b, a - b);
+    printf("%.1f %.1f\n", x + y, x - y);
     
     return 0;
 }
+
